@@ -1,0 +1,47 @@
+<!--<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django Project</title>
+    <link rel="stylesheet" href="{% static "css\style.css" %}">
+  </head>
+  <body>
+    <h1>This is index</h1>
+    {{ insert_me}}
+    <h2>A blue rose</h2>
+    <img src="{% static "images/download.jpg" %}" alt="SOMETHING IS wrong">
+  </body>
+</html>
+-->
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Level Two</title>
+    <link rel="stylesheet" href="{% static "css\style1.css" %}">
+  </head>
+  <body>
+      <h1>Level Two</h1>
+      <div class="djantwo">
+        {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+          {% for acc in access_records %}
+        <tr>
+          <td>{{ acc.name }}</td>
+          <td>{{ acc.date }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>Not found</p>
+      {% endif %}
+      </div>
+  </body>
+</html>
