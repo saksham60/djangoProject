@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Base</title>
+  </head>
+  <body>
+
+<nav class="navbar navbar-default navbar-static-top">
+
+    <a class ="navbar brand" href="{% url 'basic_app:list' %}">Schools</a>
+    <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a>
+  <a href="{% url 'basic_app:create' %}">Create a new school</a>
+
+</nav>
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>
